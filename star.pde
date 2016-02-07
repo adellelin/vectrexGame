@@ -1,4 +1,3 @@
-
 public class Star {
  float points = 5;
  float circAngle = 360/points * 2;
@@ -13,7 +12,8 @@ float collideNet;
  float sy = -1;
 
  PVector acceleration;
- PVector velocity;         PVector startPos;
+ PVector velocity;         
+ PVector startPos;
 
   PVector newPos = new PVector(0, 0);
  int age = 0;
@@ -46,8 +46,6 @@ float collideNet;
      rotate(rotateState);
      PVector point1 = new PVector(cos(radians(i))*(radius), sin(radians(i))*(radius));
      PVector point2 = new PVector(cos(radians(i + circAngle))*(radius), sin(radians(i + circAngle))*(radius));
-     //PVector cPoint1 = PVector.add(startPos, point1);
-     //PVector cPoint2 = PVector.add(startPos, point2);
      line(point1.x, point1.y, point2.x, point2.y);
      popMatrix();
      
@@ -61,7 +59,6 @@ float collideNet;
        float angle =  180 - (15 * j); // distance of lines = multiples of 15 degrees, use 180 - to get to opposite side
        float start = radius * 2; // start the line from double the r distance from center of star
        PVector pointA = new PVector(cos(radians(angle)) * start, sin(radians(angle)) * start);
-       //PVector cPointA = PVector.add(startPos, pointA);
        PVector pointB = new PVector(cos(radians(angle)) * (radius) * (3 + (0.8 * j)), 
          sin(radians(angle))*(radius) * (3 + (0.8 * j)));
        
