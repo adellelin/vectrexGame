@@ -11,7 +11,8 @@ class Flower {
 
   // The constructor should take:
   // xpos, ypos, num_petals, scale, rotation_rate, rotation_dir
-  Flower(float tempxpos, float tempypos, int tempnum_petals, float tempscale_size, float temprotation_rate) {
+  Flower(float tempxpos, float tempypos, int tempnum_petals, float tempscale_size, 
+      float temprotation_rate) {
     xpos = tempxpos;
     ypos = tempypos;
     num_petals = tempnum_petals;
